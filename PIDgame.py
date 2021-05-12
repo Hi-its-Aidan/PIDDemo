@@ -1,6 +1,6 @@
 import pygame
 import pygame.freetype
-
+import sys
 
 # initialize game
 pygame.init()
@@ -132,6 +132,8 @@ while running:
     # monitor user interactions
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
+            pygame.quit()
+            sys.exit()
             running = False
         # Mouse clicks
         if event.type == pygame.MOUSEBUTTONDOWN:
